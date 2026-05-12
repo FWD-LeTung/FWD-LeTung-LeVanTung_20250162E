@@ -1,0 +1,1176 @@
+Analysis & Synthesis report for RISC-V-Pipelined-Processor-main
+Tue Apr 14 21:14:23 2026
+Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "data_memory:datamem"
+ 10. Port Connectivity Checks: "EXMEM:i3"
+ 11. Port Connectivity Checks: "adder:adder2"
+ 12. Port Connectivity Checks: "registerFile:regfile"
+ 13. Port Connectivity Checks: "Parser:ip"
+ 14. Port Connectivity Checks: "adder:adder1"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Apr 14 21:14:23 2026           ;
+; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Revision Name                   ; RISC-V-Pipelined-Processor-main                 ;
+; Top-level Entity Name           ; RISC_V_Processor                                ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 0                                               ;
+; Total pins                      ; 516                                             ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                          ;
++---------------------------------------------------------------------------------+--------------------+---------------------------------+
+; Option                                                                          ; Setting            ; Default Value                   ;
++---------------------------------------------------------------------------------+--------------------+---------------------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                                 ;
+; Top-level entity name                                                           ; RISC_V_Processor   ; RISC-V-Pipelined-Processor-main ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V                       ;
+; Use smart compilation                                                           ; Off                ; Off                             ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                              ;
+; Enable compact report table                                                     ; Off                ; Off                             ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                            ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                             ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                             ;
+; Preserve fewer node names                                                       ; On                 ; On                              ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable                          ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001                    ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993                       ;
+; State Machine Processing                                                        ; Auto               ; Auto                            ;
+; Safe State Machine                                                              ; Off                ; Off                             ;
+; Extract Verilog State Machines                                                  ; On                 ; On                              ;
+; Extract VHDL State Machines                                                     ; On                 ; On                              ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                             ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                            ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                             ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                              ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                              ;
+; Parallel Synthesis                                                              ; On                 ; On                              ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                            ;
+; NOT Gate Push-Back                                                              ; On                 ; On                              ;
+; Power-Up Don't Care                                                             ; On                 ; On                              ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                             ;
+; Remove Duplicate Registers                                                      ; On                 ; On                              ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                             ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                             ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                             ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                             ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                             ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                              ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                             ;
+; Optimization Technique                                                          ; Balanced           ; Balanced                        ;
+; Carry Chain Length                                                              ; 70                 ; 70                              ;
+; Auto Carry Chains                                                               ; On                 ; On                              ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                              ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                             ;
+; Auto ROM Replacement                                                            ; On                 ; On                              ;
+; Auto RAM Replacement                                                            ; On                 ; On                              ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                              ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                            ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                            ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                              ;
+; Strict RAM Replacement                                                          ; Off                ; Off                             ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                              ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                             ;
+; Auto Resource Sharing                                                           ; Off                ; Off                             ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                             ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                             ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                             ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                              ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                             ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                              ;
+; Report Parameter Settings                                                       ; On                 ; On                              ;
+; Report Source Assignments                                                       ; On                 ; On                              ;
+; Report Connectivity Checks                                                      ; On                 ; On                              ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                             ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                               ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation              ;
+; HDL message level                                                               ; Level2             ; Level2                          ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                             ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                            ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                            ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                             ;
+; Clock MUX Protection                                                            ; On                 ; On                              ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                             ;
+; Block Design Naming                                                             ; Auto               ; Auto                            ;
+; SDC constraint protection                                                       ; Off                ; Off                             ;
+; Synthesis Effort                                                                ; Auto               ; Auto                            ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                              ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                             ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium                          ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                            ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                              ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                              ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                             ;
++---------------------------------------------------------------------------------+--------------------+---------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                        ;
++------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                           ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
++------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv         ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv         ;         ;
+; RISC-V Pipelined Processor/RISC-V/reg_file.sv              ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/reg_file.sv              ;         ;
+; RISC-V Pipelined Processor/RISC-V/program_counter.sv       ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv       ;         ;
+; RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv        ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv        ;         ;
+; RISC-V Pipelined Processor/RISC-V/MEMWB.sv                 ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv                 ;         ;
+; RISC-V Pipelined Processor/RISC-V/instruction_parser.sv    ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv    ;         ;
+; RISC-V Pipelined Processor/RISC-V/instruction_memory.sv    ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv    ;         ;
+; RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv    ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv    ;         ;
+; RISC-V Pipelined Processor/RISC-V/IFID.sv                  ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv                  ;         ;
+; RISC-V Pipelined Processor/RISC-V/IDEX.sv                  ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv                  ;         ;
+; RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv ;         ;
+; RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv        ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv        ;         ;
+; RISC-V Pipelined Processor/RISC-V/EXMEM.sv                 ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv                 ;         ;
+; RISC-V Pipelined Processor/RISC-V/design.sv                ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv                ;         ;
+; RISC-V Pipelined Processor/RISC-V/data_memory.sv           ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv           ;         ;
+; RISC-V Pipelined Processor/RISC-V/control_unit.sv          ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv          ;         ;
+; RISC-V Pipelined Processor/RISC-V/branching_unit.sv        ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv        ;         ;
+; RISC-V Pipelined Processor/RISC-V/alu_control.sv           ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv           ;         ;
+; RISC-V Pipelined Processor/RISC-V/alu_64bit.sv             ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv             ;         ;
+; RISC-V Pipelined Processor/RISC-V/adder.sv                 ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv                 ;         ;
+; RISC-V Pipelined Processor/RISC-V/2_1mux.sv                ; yes             ; User SystemVerilog HDL File  ; E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/2_1mux.sv                ;         ;
++------------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 516   ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; clk   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 516   ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name      ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+; |RISC_V_Processor          ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 516  ; 0            ; |RISC_V_Processor   ; RISC_V_Processor ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "data_memory:datamem"                                                                    ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; element1 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element2 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element4 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element5 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element6 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element7 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; element8 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "EXMEM:i3"                                                                           ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; zero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "adder:adder2" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; q[0] ; Input ; Info     ; Stuck at GND   ;
++------+-------+----------+----------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:regfile"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; r8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r19  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r20  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r21  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; r22  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Parser:ip"                                                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; funct3 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; funct7 ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------+
+; Port Connectivity Checks: "adder:adder1"   ;
++----------+-------+----------+--------------+
+; Port     ; Type  ; Severity ; Details      ;
++----------+-------+----------+--------------+
+; q[63..3] ; Input ; Info     ; Stuck at GND ;
+; q[1..0]  ; Input ; Info     ; Stuck at GND ;
+; q[2]     ; Input ; Info     ; Stuck at VCC ;
++----------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 516                             ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Tue Apr 14 21:14:11 2026
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC-V-Pipelined-Processor-main -c RISC-V-Pipelined-Processor-main
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/threebyonemux.sv
+    Info (12023): Found entity 1: ThreebyOneMux File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/testbench.sv
+    Info (12023): Found entity 1: tb File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/reg_file.sv
+    Info (12023): Found entity 1: registerFile File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/reg_file.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/program_counter.sv
+    Info (12023): Found entity 1: program_counter File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/pipeline_flush.sv
+    Info (12023): Found entity 1: pipeline_flush File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/memwb.sv
+    Info (12023): Found entity 1: MEMWB File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/instruction_parser.sv
+    Info (12023): Found entity 1: Parser File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/instruction_memory.sv
+    Info (12023): Found entity 1: instruction_memory File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/imm_data_extractor.sv
+    Info (12023): Found entity 1: data_extractor File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/ifid.sv
+    Info (12023): Found entity 1: IFID File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/idex.sv
+    Info (12023): Found entity 1: IDEX File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/hazard_detection_unit.sv
+    Info (12023): Found entity 1: hazard_detection_unit File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/forwardingunit.sv
+    Info (12023): Found entity 1: ForwardingUnit File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/exmem.sv
+    Info (12023): Found entity 1: EXMEM File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/design.sv
+    Info (12023): Found entity 1: RISC_V_Processor File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/data_memory.sv
+    Info (12023): Found entity 1: data_memory File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/control_unit.sv
+    Info (12023): Found entity 1: CU File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/branching_unit.sv
+    Info (12023): Found entity 1: branching_unit File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/alu_control.sv
+    Info (12023): Found entity 1: alu_control File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/alu_64bit.sv
+    Info (12023): Found entity 1: Alu64 File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/adder.sv
+    Info (12023): Found entity 1: adder File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/2_1mux.sv
+    Info (12023): Found entity 1: twox1Mux File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/2_1mux.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file risc-v pipelined processor/risc-v/tb_hazard.sv
+    Info (12023): Found entity 1: tb_hazard File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/tb_hazard.sv Line: 3
+Info (12127): Elaborating entity "RISC_V_Processor" for the top level hierarchy
+Info (12128): Elaborating entity "pipeline_flush" for hierarchy "pipeline_flush:p_flush" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 118
+Info (12128): Elaborating entity "hazard_detection_unit" for hierarchy "hazard_detection_unit:hu" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 127
+Info (12128): Elaborating entity "program_counter" for hierarchy "program_counter:pc" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 137
+Info (12128): Elaborating entity "instruction_memory" for hierarchy "instruction_memory:im" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 143
+Info (12128): Elaborating entity "adder" for hierarchy "adder:adder1" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 151
+Info (12128): Elaborating entity "IFID" for hierarchy "IFID:i1" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 163
+Info (12128): Elaborating entity "Parser" for hierarchy "Parser:ip" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 174
+Info (12128): Elaborating entity "CU" for hierarchy "CU:cu" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 187
+Info (12128): Elaborating entity "data_extractor" for hierarchy "data_extractor:immextr" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 193
+Warning (10270): Verilog HDL Case Statement warning at imm_data_extractor.sv(10): incomplete case statement has no default case item File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Warning (10240): Verilog HDL Always Construct warning at imm_data_extractor.sv(10): inferring latch(es) for variable "imm_data", which holds its previous value in one or more paths through the always construct File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[0]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[1]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[2]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[3]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[4]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[5]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[6]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[7]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[8]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[9]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (10041): Inferred latch for "imm_data[10]" at imm_data_extractor.sv(10) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv Line: 10
+Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:regfile" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 212
+Info (12128): Elaborating entity "IDEX" for hierarchy "IDEX:i2" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 230
+Info (12128): Elaborating entity "ThreebyOneMux" for hierarchy "ThreebyOneMux:m1" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 242
+Warning (10270): Verilog HDL Case Statement warning at ThreebyOneMux.sv(12): incomplete case statement has no default case item File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Warning (10240): Verilog HDL Always Construct warning at ThreebyOneMux.sv(12): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[0]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[1]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[2]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[3]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[4]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[5]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[6]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[7]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[8]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[9]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[10]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[11]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[12]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[13]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[14]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[15]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[16]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[17]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[18]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[19]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[20]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[21]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[22]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[23]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[24]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[25]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[26]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[27]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[28]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[29]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[30]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[31]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[32]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[33]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[34]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[35]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[36]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[37]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[38]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[39]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[40]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[41]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[42]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[43]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[44]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[45]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[46]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[47]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[48]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[49]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[50]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[51]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[52]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[53]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[54]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[55]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[56]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[57]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[58]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[59]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[60]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[61]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[62]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (10041): Inferred latch for "out[63]" at ThreebyOneMux.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv Line: 12
+Info (12128): Elaborating entity "twox1Mux" for hierarchy "twox1Mux:mux1" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 252
+Info (12128): Elaborating entity "Alu64" for hierarchy "Alu64:alu" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 261
+Warning (10270): Verilog HDL Case Statement warning at alu_64bit.sv(12): incomplete case statement has no default case item File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Warning (10240): Verilog HDL Always Construct warning at alu_64bit.sv(12): inferring latch(es) for variable "Result", which holds its previous value in one or more paths through the always construct File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[0]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[1]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[2]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[3]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[4]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[5]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[6]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[7]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[8]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[9]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[10]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[11]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[12]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[13]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[14]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[15]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[16]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[17]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[18]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[19]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[20]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[21]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[22]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[23]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[24]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[25]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[26]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[27]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[28]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[29]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[30]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[31]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[32]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[33]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[34]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[35]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[36]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[37]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[38]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[39]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[40]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[41]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[42]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[43]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[44]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[45]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[46]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[47]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[48]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[49]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[50]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[51]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[52]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[53]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[54]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[55]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[56]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[57]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[58]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[59]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[60]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[61]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[62]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (10041): Inferred latch for "Result[63]" at alu_64bit.sv(12) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv Line: 12
+Info (12128): Elaborating entity "alu_control" for hierarchy "alu_control:ac" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 268
+Warning (10240): Verilog HDL Always Construct warning at alu_control.sv(8): inferring latch(es) for variable "operation", which holds its previous value in one or more paths through the always construct File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv Line: 8
+Info (10041): Inferred latch for "operation[0]" at alu_control.sv(16) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv Line: 16
+Info (10041): Inferred latch for "operation[1]" at alu_control.sv(16) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv Line: 16
+Info (10041): Inferred latch for "operation[2]" at alu_control.sv(16) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv Line: 16
+Info (10041): Inferred latch for "operation[3]" at alu_control.sv(16) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv Line: 16
+Info (12128): Elaborating entity "EXMEM" for hierarchy "EXMEM:i3" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 279
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:datamem" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 297
+Warning (10240): Verilog HDL Always Construct warning at data_memory.sv(47): inferring latch(es) for variable "read_data", which holds its previous value in one or more paths through the always construct File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[0]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[1]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[2]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[3]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[4]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[5]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[6]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[7]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[8]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[9]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[10]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[11]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[12]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[13]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[14]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[15]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[16]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[17]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[18]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[19]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[20]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[21]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[22]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[23]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[24]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[25]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[26]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[27]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[28]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[29]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[30]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[31]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[32]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[33]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[34]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[35]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[36]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[37]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[38]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[39]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[40]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[41]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[42]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[43]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[44]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[45]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[46]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[47]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[48]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[49]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[50]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[51]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[52]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[53]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[54]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[55]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[56]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[57]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[58]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[59]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[60]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[61]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[62]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (10041): Inferred latch for "read_data[63]" at data_memory.sv(47) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv Line: 47
+Info (12128): Elaborating entity "MEMWB" for hierarchy "MEMWB:i4" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 312
+Info (12128): Elaborating entity "ForwardingUnit" for hierarchy "ForwardingUnit:f1" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 326
+Info (12128): Elaborating entity "branching_unit" for hierarchy "branching_unit:branc" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 332
+Warning (10270): Verilog HDL Case Statement warning at branching_unit.sv(16): incomplete case statement has no default case item File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv Line: 16
+Warning (10240): Verilog HDL Always Construct warning at branching_unit.sv(16): inferring latch(es) for variable "addermuxselect", which holds its previous value in one or more paths through the always construct File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv Line: 16
+Info (10041): Inferred latch for "addermuxselect" at branching_unit.sv(16) File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv Line: 16
+Info (144001): Generated suppressed messages file E:/Verilog/RISC-V-Pipelined-Processor-main/output_files/RISC-V-Pipelined-Processor-main.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 516 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 3
+    Warning (15610): No output dependent on input pin "reset" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 4
+    Warning (15610): No output dependent on input pin "element1[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element1[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 5
+    Warning (15610): No output dependent on input pin "element2[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element2[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 6
+    Warning (15610): No output dependent on input pin "element3[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element3[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 7
+    Warning (15610): No output dependent on input pin "element4[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element4[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 8
+    Warning (15610): No output dependent on input pin "element5[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element5[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 9
+    Warning (15610): No output dependent on input pin "element6[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element6[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 10
+    Warning (15610): No output dependent on input pin "element7[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element7[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 11
+    Warning (15610): No output dependent on input pin "element8[0]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[1]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[2]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[3]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[4]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[5]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[6]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[7]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[8]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[9]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[10]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[11]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[12]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[13]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[14]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[15]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[16]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[17]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[18]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[19]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[20]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[21]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[22]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[23]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[24]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[25]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[26]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[27]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[28]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[29]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[30]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[31]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[32]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[33]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[34]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[35]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[36]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[37]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[38]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[39]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[40]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[41]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[42]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[43]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[44]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[45]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[46]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[47]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[48]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[49]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[50]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[51]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[52]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[53]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[54]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[55]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[56]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[57]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[58]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[59]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[60]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[61]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[62]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "element8[63]" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 12
+    Warning (15610): No output dependent on input pin "stall" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 13
+    Warning (15610): No output dependent on input pin "flush" File: E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv Line: 13
+Info (21057): Implemented 516 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 516 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 528 warnings
+    Info: Peak virtual memory: 4823 megabytes
+    Info: Processing ended: Tue Apr 14 21:14:23 2026
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:24
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/Verilog/RISC-V-Pipelined-Processor-main/output_files/RISC-V-Pipelined-Processor-main.map.smsg.
+
+
