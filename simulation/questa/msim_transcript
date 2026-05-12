@@ -1,0 +1,310 @@
+# Reading pref.tcl
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 win64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do RISC-V-Pipelined-Processor-main_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work rtl_work 
+# ** Note: (vmap-220) 'C:/altera/25.1std/questa_fse/win64/../modelsim.ini' is used as the ini file.
+# Copying C:/altera/25.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:31 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ThreebyOneMux.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module ThreebyOneMux
+# 
+# Top level modules:
+# 	ThreebyOneMux
+# End time: 22:25:31 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/reg_file.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:31 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/reg_file.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module registerFile
+# 
+# Top level modules:
+# 	registerFile
+# End time: 22:25:31 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:32 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module program_counter
+# 
+# Top level modules:
+# 	program_counter
+# End time: 22:25:32 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:32 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module pipeline_flush
+# 
+# Top level modules:
+# 	pipeline_flush
+# End time: 22:25:32 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:32 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module MEMWB
+# 
+# Top level modules:
+# 	MEMWB
+# End time: 22:25:32 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:32 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module Parser
+# 
+# Top level modules:
+# 	Parser
+# End time: 22:25:33 on Apr 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:33 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module instruction_memory
+# 
+# Top level modules:
+# 	instruction_memory
+# End time: 22:25:33 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:33 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module data_extractor
+# 
+# Top level modules:
+# 	data_extractor
+# End time: 22:25:33 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:33 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module IFID
+# 
+# Top level modules:
+# 	IFID
+# End time: 22:25:34 on Apr 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:34 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module IDEX
+# 
+# Top level modules:
+# 	IDEX
+# End time: 22:25:34 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:34 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module hazard_detection_unit
+# 
+# Top level modules:
+# 	hazard_detection_unit
+# End time: 22:25:34 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:34 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module ForwardingUnit
+# 
+# Top level modules:
+# 	ForwardingUnit
+# End time: 22:25:34 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:35 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module EXMEM
+# 
+# Top level modules:
+# 	EXMEM
+# End time: 22:25:35 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:35 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/design.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_Processor
+# 
+# Top level modules:
+# 	RISC_V_Processor
+# End time: 22:25:35 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:35 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module data_memory
+# 
+# Top level modules:
+# 	data_memory
+# End time: 22:25:35 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:36 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module CU
+# 
+# Top level modules:
+# 	CU
+# End time: 22:25:36 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:36 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module branching_unit
+# 
+# Top level modules:
+# 	branching_unit
+# End time: 22:25:36 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:36 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module alu_control
+# 
+# Top level modules:
+# 	alu_control
+# End time: 22:25:36 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:37 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module Alu64
+# 
+# Top level modules:
+# 	Alu64
+# End time: 22:25:37 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:37 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 22:25:37 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V\ Pipelined\ Processor/RISC-V {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/2_1mux.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:25:37 on Apr 16,2026
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V" E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/2_1mux.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module twox1Mux
+# 
+# Top level modules:
+# 	twox1Mux
+# End time: 22:25:37 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work {E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/tb_hazard.sv}
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 22:29:14 on Apr 16,2026
+# vlog -reportprogress 300 -work work E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/tb_hazard.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module tb_hazard
+# 
+# Top level modules:
+# 	tb_hazard
+# End time: 22:29:14 on Apr 16,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc work.tb_hazard
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.tb_hazard 
+# Start time: 22:29:22 on Apr 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.tb_hazard(fast)
+# Loading work.hazard_detection_unit(fast)
+add wave sim:/tb_hazard/*
+run
+# ===== BAT DAU TEST HAZARD DETECTION UNIT =====
+run
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_hazard(fast)
+# Loading work.hazard_detection_unit(fast)
+run
+# ===== BAT DAU TEST HAZARD DETECTION UNIT =====
+# PASS: Memread=0, Rd= 7, Rs1= 5, Rs2= 6 -> Stall=0
+# PASS: Memread=0, Rd= 5, Rs1= 5, Rs2= 6 -> Stall=0
+# PASS: Memread=1, Rd= 5, Rs1= 5, Rs2= 6 -> Stall=1
+# PASS: Memread=1, Rd= 8, Rs1= 2, Rs2= 8 -> Stall=1
+# PASS: Memread=1, Rd= 9, Rs1= 1, Rs2= 2 -> Stall=0
+# ==============================================
+# ===== CHUC MUNG! TAT CA CAC TEST DEU PASS =====
+# ==============================================
+# ** Note: $stop    : E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/tb_hazard.sv(83)
+#    Time: 60 ns  Iteration: 0  Instance: /tb_hazard
+# Break in Module tb_hazard at E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/tb_hazard.sv line 83
+# End time: 22:45:38 on Apr 16,2026, Elapsed time: 0:16:16
+# Errors: 0, Warnings: 1

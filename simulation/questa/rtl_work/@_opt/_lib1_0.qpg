@@ -1,0 +1,418 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11f vlog 2025.2 2025.05, May 31 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dE:/Verilog/RISC-V-Pipelined-Processor-main/simulation/questa
+T_opt
+!i145 1
+!i144 0
+!s110 1776353364
+VP`CAB@0VL;nTd^d=Ddo8[3
+04 9 4 work tb_hazard fast 0
+=1-b0359f679274-69e10052-300-1cf4
+R0
+!s12f OEM100
+!s12b OEM100
+!s124 OEM10U2 
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0 defaultOptions 1107585188
+n@_opt
+OL;O;2025.2;82
+vadder
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv
+Z2 DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+Z3 !s110 1776353137
+!i10b 1
+!s100 jC`KndYej^9Yn;MT;U2<C2
+I<39T<cnKQ>z8Ff?`fi5m@1
+S1
+R1
+Z4 w1620492819
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/adder.sv
+!i122 19
+L0 1 7
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2025.2;82
+r1
+!s85 0
+31
+!i113 0
+Z7 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0 defaultOptions 1085333592
+vAlu64
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv
+R2
+R3
+!i10b 1
+!s100 B;EPf1=S83>L6XC8C<LHk2
+IT?4[^J`eh;R8::MDRcjS@3
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_64bit.sv
+!i122 18
+L0 1 24
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@alu64
+valu_control
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv
+R2
+Z9 !s110 1776353136
+!i10b 1
+!s100 EJQIZ`]95meXOD<g^47Ei2
+I[2HbVR?Wc=i@cU1b9@4H@1
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/alu_control.sv
+!i122 17
+L0 1 36
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vbranching_unit
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv
+R2
+R9
+!i10b 1
+!s100 M]`nS<imgO;9LgDPkLY9G0
+IJ:F>j:RG<jH0V8VVb3]ec3
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/branching_unit.sv
+!i122 16
+L0 1 40
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vCU
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv
+R2
+R9
+!i10b 1
+!s100 _91Jbz5K>aa?[mhid@]Zm1
+IK06NkL>W;R2j>Uc?czkMf0
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/control_unit.sv
+!i122 15
+L0 1 93
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@c@u
+vdata_extractor
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv
+R2
+Z10 !s110 1776353133
+!i10b 1
+!s100 mG_nISkgkZB9;BcLBZ`Ue2
+I>]R18PlG1c5jZmZmh>T212
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/imm_data_extractor.sv
+!i122 7
+L0 2 26
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vdata_memory
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv
+R2
+Z11 !s110 1776353135
+!i10b 1
+!s100 JV`2ldZYSMO5WRO:DeMR`0
+I@6012ii:_K5;8BBd8XH=n2
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/data_memory.sv
+!i122 14
+L0 2 72
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vEXMEM
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv
+R2
+R11
+!i10b 1
+!s100 ;H50]RkKT@kB4BRZEQRD73
+I_@]W7XjlAB9a6=E0;z8Z^3
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/EXMEM.sv
+!i122 12
+L0 2 50
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@e@x@m@e@m
+vForwardingUnit
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv
+R2
+Z12 !s110 1776353134
+!i10b 1
+!s100 4go6o9U2GPQ6X;]6NUN_>1
+IfDNmc3bHfN4k?3a7f^Sl71
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/ForwardingUnit.sv
+!i122 11
+L0 1 50
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@forwarding@unit
+vhazard_detection_unit
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv
+R2
+R12
+!i10b 1
+!s100 5gcTLYbDc=:;Rkg@dGaLL0
+IJhjQ`zcH`Wfnl[57]?1EH1
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/hazard_detection_unit.sv
+!i122 10
+L0 1 21
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vIDEX
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv
+R2
+R12
+!i10b 1
+!s100 Nef;Vz8bjnDC1Mg>KfcOm1
+Ij[>Vf3[ne<OW<<N]2jSXO0
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IDEX.sv
+!i122 9
+L0 1 66
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@i@d@e@x
+vIFID
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv
+R2
+R12
+!i10b 1
+!s100 LOl<4NKHX;9cH6ROF=JEF1
+I@L;620o0ZR2Q19;lD<j>Q2
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/IFID.sv
+!i122 8
+L0 1 25
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@i@f@i@d
+vinstruction_memory
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv
+R2
+R10
+!i10b 1
+!s100 l5JU?;DI;gjQD_jghcjN=2
+ICJW;T_c>0VlaO:z?ggRGF3
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_memory.sv
+!i122 6
+L0 2 38
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vMEMWB
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv
+R2
+Z13 !s110 1776353132
+!i10b 1
+!s100 iiLF1m9nQ:h99EA4So<Zk2
+IzRlY[G@R[A<[FVlC?lBXk2
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/MEMWB.sv
+!i122 4
+L0 2 33
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@m@e@m@w@b
+vParser
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv
+R2
+R10
+!i10b 1
+!s100 _PkcZ7JXcQ9Im<;H1cVX42
+I>FbnGMHTIJMo6>[_;XQkF2
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/instruction_parser.sv
+!i122 5
+L0 1 18
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+n@parser
+vpipeline_flush
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv
+R2
+R13
+!i10b 1
+!s100 azbfHN6gbo?MLS8eVHVJE0
+IV``AjIEXnn<3QmNgD@cYo2
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/pipeline_flush.sv
+!i122 3
+L0 1 20
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vprogram_counter
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv
+R2
+R13
+!i10b 1
+!s100 2CF`G^zkeTmLf:>H6]38I2
+InOjY5h08X<N<DZN[4LWna3
+S1
+R1
+R4
+8E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv
+FE:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/program_counter.sv
+!i122 2
+L0 1 19
+R5
+R6
+r1
+!s85 0
+31
+!i113 0
+R7
+R8
+vregisterFile
+2E:/Verilog/RISC-V-Pipelined-Processor-main/RISC-V Pipelined Processor/RISC-V/reg_file.sv
+R2
+Z14 !s110 1776353131
+!i10b 1
+!s100 =_AISTLTFB4lI`dI>;g]X1
+I0aaN>OieJF0FoOIkd]^2
